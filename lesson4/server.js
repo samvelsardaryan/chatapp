@@ -11,7 +11,7 @@ app.get('/', function (req, res) {
    res.redirect('index.html');
 });
 
-server.listen(4000);
+server.listen(process.env.PORT || 4000);
 
 io.on('connection', function (socket) {
     for(var i in messages) {
